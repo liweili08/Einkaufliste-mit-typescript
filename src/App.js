@@ -5,38 +5,41 @@ import ChangePage from "./pages/ChangePage";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import TestPage from "./pages/TestPage";
 import {useState} from "react";
+import AddItem from "./components/AddItem";
 
 
 
-function NameForm(props){
-    const [value, setValue] = useState('');
-
-    const handleChange=(event)=>{
-        this.setValue(event.target.value);
-    };
-    const handleSubmit = (event) => {
-        alert('A name was submitted: ' + this.value);
-        event.preventDefault();
-    };
-    return (
-        <form onSubmit={handleSubmit}>
-            <label>Name:
-                <input type="text"
-                       value={value}
-                       onChange={handleChange}
-                />
-            </label>
-            <input type="submit" value="Submit" />
-        </form>
-    );
-}
+// function NameForm(props){
+//     const [value, setValue] = useState('');
+//
+//     const handleChange=(event)=>{
+//         this.setValue(event.target.value);
+//
+//     };
+//     const handleSubmit = (event) => {
+//         alert('A name was submitted: ' + this.value);
+//         event.preventDefault();
+//     };
+//     return (
+//         <form onSubmit={handleSubmit}>
+//             <label>Name:
+//                 <input type="text"
+//                        value={value}
+//                        onChange={handleChange}
+//                 />
+//             </label>
+//             <input type="submit" value="Submit" />
+//         </form>
+//     );
+// }
 
 
 function App() {
+
   return (
 <div className="App">
-    NameForm(props)
-      <BrowserRouter>
+    {/*<NameForm />*/}
+    <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/change" element={<ChangePage/>}/>
