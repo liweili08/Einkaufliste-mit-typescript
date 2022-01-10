@@ -1,11 +1,15 @@
+
 import Header from "../components/Header";
 import Navi from "../components/Navi";
 import AddItem from "../components/AddItem";
 
-export default function HomePage(){
+interface HomePageProps{
+    title:string
+}
+export default function HomePage(props:HomePageProps){
     return(
         <div className="homePage">
-            <Header title="Probier mal"/>
+            <Header title={props.title}/>
             <AddItem/>
             <Navi/>
         </div>

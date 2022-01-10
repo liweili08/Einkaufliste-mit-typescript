@@ -1,7 +1,10 @@
 import "./Header.css"
 import AddItem from "./AddItem";
 
-export default function Header(props){
+interface HeaderProps{
+    title:string;
+}
+export default function Header(props:HeaderProps){
     return(<div className="header">
             <h1>Was möchten Sie einkaufen?</h1>
             <h2>Hier ist Ihre Einkaufliste:</h2>
